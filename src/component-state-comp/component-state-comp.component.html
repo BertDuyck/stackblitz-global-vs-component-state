@@ -1,0 +1,7 @@
+<button (click)="filter('a')">Filter a</button>
+
+<button (click)="filter('')">Reset</button>
+
+<ng-container *ngIf="items$ | async; let items">
+  <p *ngFor="let item of items">{{ item }}</p>
+</ng-container>
